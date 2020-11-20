@@ -1,7 +1,8 @@
-import {Card, Deck, register} from '../src/decks';
-import * as chalk from 'chalk';
-import puppeteer from 'puppeteer/lib/esm/puppeteer/node-puppeteer-core';
+import {Deck, register} from '../src/decks';
+import chalk from 'chalk';
+import puppeteer from 'puppeteer';
 import {Page} from 'puppeteer';
+import fs from 'fs';
 
 const renderDeck = async (deck: Deck, page: Page) =>
 {
@@ -16,17 +17,15 @@ const renderDeck = async (deck: Deck, page: Page) =>
 			count++;
 			return;
 		}
-
-		for (let i = 0; i < card.amount; i++)
-		{
-			count += card.amount;
-		}
+		count += card.amount;
 	});
 
 	await page.setViewport({
 		width: deck.width * 10,
 		height: deck.height * 7,
 	});
+
+	await fs.promises.mkdir(`out/${deck.name}/`, {recursive: true});
 
 	for (let i = 1; i <= Math.ceil(count / 69); i++)
 	{
