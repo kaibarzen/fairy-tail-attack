@@ -22,7 +22,7 @@ const Hidden = (props: HiddenProps) =>
 	return (
 		<Wrapper deck={deck}>
 			<div style={{width: deck.width, height: deck.height}}>
-				<deck.style.hidden/>
+				<deck.style.hidden width={deck.width} height={deck.height}/>
 			</div>
 		</Wrapper>
 	);

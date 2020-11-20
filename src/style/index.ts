@@ -8,22 +8,22 @@ export interface Wrapper
 
 export interface Backside
 {
-	width?: number,
-	height?: number,
+	width: number,
+	height: number,
 	title?: string,
 	text?: string
 }
 
 export interface Hidden
 {
-	width?: number,
-	height?: number,
+	width: number,
+	height: number,
 }
 
 export interface Card extends DeckCard
 {
-	width?: number,
-	height?: number,
+	width: number,
+	height: number,
 }
 
 export interface Style

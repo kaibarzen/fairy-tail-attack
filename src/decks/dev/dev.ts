@@ -4,8 +4,10 @@ import {Color, Type} from '../types';
 
 const devDeck: Deck = {
 	name: 'dev',
-	width: 300,
-	height: 450,
+	width: 400,
+	height: 600,
+	x: 10,
+	y: 7,
 	style: gradient,
 	cards: [
 		{
@@ -49,7 +51,7 @@ const devDeck: Deck = {
 			image: "https://i.redd.it/oupswmepc5y11.jpg"
 		},
 		{
-			amount: 100,
+			amount: 50,
 			title: 'Magnus Keip',
 			text: 'Instantly win, also Magnus Keip is so great have 100 card of him.',
 			image: "https://cdn.discordapp.com/attachments/594154153895264257/778022911990431744/5b440d2d-1b23-4c78-a165-57d863a1a897.png",

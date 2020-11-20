@@ -44,16 +44,17 @@ const Sheet = (props: SheetProps) =>
 		}
 	});
 
-	const sheetCards = allCards.splice((props.match.params.n - 1) * 69, props.match.params.n * 69);
+	const sheetCount = deck.x * deck.y; // How Many cards on a single sheet
+	const sheetCards = allCards.splice((props.match.params.n - 1) * (sheetCount -1), props.match.params.n * (sheetCount -1));
 
 	let out = [];
 
-	for (let i = 0; i < 70; i++)
+	for (let i = 0; i < sheetCount; i++)
 	{
-		const x = (i % 10) * deck.width;
-		const y = Math.floor(i / 10) * deck.height;
+		const x = (i % deck.x) * deck.width;
+		const y = Math.floor(i / deck.x) * deck.height;
 
-		if (i === 69) // Last pos is always the hidden card
+		if (i === (sheetCount -1)) // Last pos is always the hidden card
 		{
 			out.push(
 				<Wrapper deck={deck}>

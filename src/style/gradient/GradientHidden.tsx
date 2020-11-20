@@ -4,9 +4,19 @@ import {Hidden} from '../index';
 const GradientHidden = (props: Hidden) =>
 {
 	return (
-		<div className={"card hidden color"}>
-			<div className={"content"}>
-				<div className={"color text textclip"}>
+		<div className={'card hidden color'}>
+			<div
+				className={'content'}
+				style={{
+					margin: props.width * 0.027,
+				}}
+			>
+				<div
+					className={'color textclip'}
+					style={{
+						fontSize: props.height * 0.9,
+					}}
+				>
 					?
 				</div>
 			</div>

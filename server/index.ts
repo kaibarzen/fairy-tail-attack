@@ -4,7 +4,7 @@ import puppeteer from 'puppeteer';
 import {Page} from 'puppeteer';
 import fs from 'fs';
 
-const renderDeck = async (deck: Deck, page: Page) =>
+const renderDeck = async (deck: Deck, page: Page, puppeteer: any) =>
 {
 	console.log(chalk.magentaBright(`Rendering Deck "${deck.name}"`));
 
@@ -21,18 +21,20 @@ const renderDeck = async (deck: Deck, page: Page) =>
 	});
 
 	await page.setViewport({
-		width: deck.width * 10,
-		height: deck.height * 7,
+		width: deck.width * deck.x,
+		height: deck.height * deck.y,
 	});
-
 	await fs.promises.mkdir(`out/${deck.name}/`, {recursive: true});
 
-	for (let i = 1; i <= Math.ceil(count / 69); i++)
+	console.log(chalk.magentaBright(`Sheets to render: ${Math.ceil(count / (deck.x * deck.y - 1))}`));
+
+	for (let i = 1; i <= Math.ceil(count / (deck.x * deck.y - 1)); i++)
 	{
-		console.log(chalk.redBright(`Rendering Sheet "${i}"`));
+		console.log(chalk.redBright(`Rendering Sheet ${i}`));
 
 		await page.goto(`http://localhost:3000/${deck.name}/sheet/${i}`, {waitUntil: 'networkidle2'});
-		await page.screenshot({path: `out/${deck.name}/sheet_${i}.png`});
+		await page.screenshot({path: `out/${deck.name}/sheet_${i}.png`, fullPage: true});
+
 	}
 	await renderBackside(deck, page);
 };
@@ -61,7 +63,7 @@ const renderBackside = async (deck: Deck, page: Page) =>
 		register.map(async (item) =>
 		{
 			// @ts-ignore
-			await renderDeck(item, page);
+			await renderDeck(item, page, puppeteer);
 		}),
 	);
 
