@@ -1,7 +1,7 @@
 import {Style} from '../style';
 import devDeck from './dev/dev';
 
-const register: Deck[] = [devDeck];
+export const register: Deck[] = [devDeck];
 
 export const getDeck = (strg: string) =>
 {
