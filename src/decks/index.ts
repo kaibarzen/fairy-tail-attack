@@ -1,5 +1,6 @@
 import {Style} from '../style';
 import devDeck from './dev/dev';
+import {Color, Type} from './types';
 
 export const register: Deck[] = [devDeck];
 
@@ -26,4 +27,6 @@ export interface Card
 	text: string,
 	amount?: number,
 	image?: string,
+	color?: Color,
+	type?: Type,
 }

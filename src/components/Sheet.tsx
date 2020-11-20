@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card, getDeck} from '../decks';
+import Wrapper from './Wrapper';
 
 interface SheetProps
 {
@@ -55,37 +56,43 @@ const Sheet = (props: SheetProps) =>
 		if (i === 69) // Last pos is always the hidden card
 		{
 			out.push(
-				<div style={{position: 'absolute', top: y, left: x, width: deck.width, height: deck.height}}>
-					<deck.style.hidden
-						width={deck.width}
-						height={deck.height}
-					/>
-				</div>,
+				<Wrapper deck={deck}>
+					<div style={{position: 'absolute', top: y, left: x, width: deck.width, height: deck.height}}>
+						<deck.style.hidden
+							width={deck.width}
+							height={deck.height}
+						/>
+					</div>
+				</Wrapper>,
 			);
 		}
 		else if (sheetCards[i]) // Push the normal cards
 		{
 			out.push(
-				<div style={{position: 'absolute', top: y, left: x, width: deck.width, height: deck.height}}>
-					<deck.style.card
-						width={deck.width}
-						height={deck.height}
-						{...sheetCards[i]}
-					/>
-				</div>,
+				<Wrapper deck={deck}>
+					<div style={{position: 'absolute', top: y, left: x, width: deck.width, height: deck.height}}>
+						<deck.style.card
+							width={deck.width}
+							height={deck.height}
+							{...sheetCards[i]}
+						/>
+					</div>
+				</Wrapper>,
 			);
 		}
 		else // Fill the rest of the sheets with filler cards
 		{
 			out.push(
-				<div style={{position: 'absolute', top: y, left: x, width: deck.width, height: deck.height}}>
-					<deck.style.card
-						width={deck.width}
-						height={deck.height}
-						title={'DISCARD THIS'}
-						text={'This is an filler card, discard it and draw another.'}
-					/>
-				</div>,
+				<Wrapper deck={deck}>
+					<div style={{position: 'absolute', top: y, left: x, width: deck.width, height: deck.height}}>
+						<deck.style.card
+							width={deck.width}
+							height={deck.height}
+							title={'DISCARD THIS'}
+							text={'This is an filler card, discard it and draw another.'}
+						/>
+					</div>
+				</Wrapper>,
 			);
 		}
 

@@ -21,8 +21,8 @@ const Backside = (props: BacksideProps) =>
 
 	return (
 		<Wrapper deck={deck}>
-			<div style={{width: deck.width, height: deck.height}}>
-				<deck.style.backside/>
+			<div style={{width: deck.width, height: deck.height, position: 'absolute'}}>
+				<deck.style.backside />
 			</div>
 		</Wrapper>
 	);

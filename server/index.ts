@@ -12,7 +12,7 @@ const renderDeck = async (deck: Deck, page: Page) =>
 
 	deck.cards.map((card) =>
 	{
-		if (!card.amount || isNaN(card.amount))
+		if (!card.amount || isNaN(card.amount) || card.amount < 1)
 		{
 			count++;
 			return;
@@ -32,7 +32,7 @@ const renderDeck = async (deck: Deck, page: Page) =>
 		console.log(chalk.redBright(`Rendering Sheet "${i}"`));
 
 		await page.goto(`http://localhost:3000/${deck.name}/sheet/${i}`, {waitUntil: 'networkidle2'});
-		await page.screenshot({path: `out/${deck.name}/sheet_${count}.png`});
+		await page.screenshot({path: `out/${deck.name}/sheet_${i}.png`});
 	}
 	await renderBackside(deck, page);
 };

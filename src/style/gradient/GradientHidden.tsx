@@ -4,8 +4,12 @@ import {Hidden} from '../index';
 const GradientHidden = (props: Hidden) =>
 {
 	return (
-		<div>
-			? GRADIENT HIDDEN ?
+		<div className={"card hidden color"}>
+			<div className={"content"}>
+				<div className={"color text textclip"}>
+					?
+				</div>
+			</div>
 		</div>
 	);
 };

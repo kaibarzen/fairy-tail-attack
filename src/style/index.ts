@@ -1,4 +1,4 @@
-import React, {ComponentElement, ComponentType, ReactElement, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import {Card as DeckCard} from "../decks/index"
 
 export interface Wrapper
@@ -10,6 +10,8 @@ export interface Backside
 {
 	width?: number,
 	height?: number,
+	title?: string,
+	text?: string
 }
 
 export interface Hidden

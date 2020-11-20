@@ -1,5 +1,6 @@
 import React from 'react';
 import {Wrapper} from '../index';
+import './gradient.css';
 
 const GradientWrapper = (props: Wrapper) =>
 {
@@ -7,7 +8,7 @@ const GradientWrapper = (props: Wrapper) =>
 	// Create context etc for icon styling?
 
 	return (
-		<div>
+		<div className={"gradient"}>
 			{props.children}
 		</div>
 	);
