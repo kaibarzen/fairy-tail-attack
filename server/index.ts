@@ -59,13 +59,9 @@ const renderBackside = async (deck: Deck, page: Page) =>
 	const browser = await puppeteer.launch({defaultViewport: null});
 	const page = await browser.newPage();
 
-	await Promise.all(
-		register.map(async (item) =>
-		{
-			// @ts-ignore
-			await renderDeck(item, page, puppeteer);
-		}),
-	);
+	for(const deck of register){
+		await renderDeck(deck, page, puppeteer);
+	}
 
 	await browser.close();
 
