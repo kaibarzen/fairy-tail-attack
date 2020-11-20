@@ -35,13 +35,14 @@ const Sheet = (props: SheetProps) =>
 		if (!card.amount || isNaN(card.amount))
 		{
 			allCards.push(card);
-			return;
+			return null;
 		}
 
 		for (let i = 0; i < card.amount; i++)
 		{
 			allCards.push(card);
 		}
+		return null;
 	});
 
 	const sheetCount = deck.x * deck.y; // How Many cards on a single sheet

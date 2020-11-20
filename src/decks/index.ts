@@ -1,8 +1,10 @@
 import {Style} from '../style';
-import devDeck from './dev/dev';
 import {Color, Type} from './types';
+import ftaDeck from './fta/fta';
+import {ReactNode} from 'react';
+import devDeck from './dev/dev';
 
-export const register: Deck[] = [devDeck];
+export const register: Deck[] = [devDeck, ftaDeck];
 
 export const getDeck = (strg: string) =>
 {
@@ -25,8 +27,8 @@ export interface Deck
 
 export interface Card
 {
-	title: string,
-	text: string,
+	title: ReactNode,
+	text: ReactNode,
 	amount?: number,
 	image?: string,
 	color?: Color,

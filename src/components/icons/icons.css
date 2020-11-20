@@ -1,0 +1,51 @@
+/*Imported from index*/
+
+.icon {
+    display: inline;
+    font-weight: 700;
+}
+
+.damageIcon {
+    color: #FF416C;
+    -webkit-text-fill-color: #FF416C;
+}
+
+.shieldIcon {
+    color: #bdc3c7;
+    -webkit-text-fill-color: #bdc3c7;
+}
+
+.hpIcon {
+    color: #f64f59;
+    -webkit-text-fill-color: #f64f59;
+}
+
+.maxHpIcon {
+    color: #f64f59;
+    -webkit-text-fill-color: #f64f59;
+}
+
+.cardIcon {
+    color: #f4791f;
+    -webkit-text-fill-color: #f4791f;
+}
+
+.handCardIcon {
+    color: #00d2ff;
+    -webkit-text-fill-color: #00d2ff;
+}
+
+.equipmentCardIcon {
+    color: #00d2ff;
+    -webkit-text-fill-color: #00d2ff;
+}
+
+.exposeIcon {
+    color: #00d2ff;
+    -webkit-text-fill-color: #00d2ff;
+}
+
+.playerIcon {
+    color: #00d2ff;
+    -webkit-text-fill-color: #00d2ff;
+}
