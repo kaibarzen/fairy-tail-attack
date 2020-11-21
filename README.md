@@ -10,3 +10,17 @@ Run `yarn start` to open the CRA dev server, go to following paths to preview yo
 1. Start the dev server with `yarn start` and wait until a browser windows opens und loads.
 2. Run `yarn build` which exports you cards to out/:deck/
 3. Import them into TTS
+
+# Todo
+
+- done but still todo
+    - same spacing for all icons
+
+- Yomi Yomi Card low contrast
+- switch fire icon with sword icon (attack)
+- add green color (healing)
+- add grey color (negating + block)
+- add character cards
+- add role cards
+- 
+
