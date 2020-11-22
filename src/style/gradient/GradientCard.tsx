@@ -1,10 +1,10 @@
 import React from 'react';
-import {Card} from '../index';
-import {Color, Type} from '../../decks/types';
+import {ActionCardStyle} from '../index';
+import {ActionColor, Type} from '../../decks/types';
 
-const GradientCard = (props: Card) =>
+const GradientCard = (props: ActionCardStyle) =>
 {
-	props = {color: Color.RED, type: Type.ACTION, ...props};
+	props = {color: ActionColor.RED, type: Type.ACTION, ...props};
 
 	if (props.type === undefined)
 	{
@@ -25,17 +25,11 @@ const GradientCard = (props: Card) =>
 				<div
 					className={'background'}
 					style={{
-						backgroundImage: `url("${props.image}")`,
-						position: 'absolute',
 						width: props.width * 0.946,
 						height: props.height * 0.946,
-						borderRadius: 16,
-						filter: 'blur(20px) brightness(0.6) grayscale(0.8)',
-						backgroundSize: 'cover',
-						overflow: 'hidden',
 					}}
 				>
-
+					<img src={props.image} alt={""}/>
 				</div>
 
 				<div

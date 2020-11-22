@@ -10,7 +10,7 @@ const renderDeck = async (deck: Deck, page: Page, puppeteer: any) =>
 
 	let count = 0;
 
-	deck.cards.map((card) =>
+	deck.actionCards.map((card) =>
 	{
 		if (!card.amount || isNaN(card.amount) || card.amount < 1)
 		{

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, getDeck} from '../decks';
+import {ActionCard, getDeck} from '../decks';
 import Wrapper from './Wrapper';
 
 interface SheetProps
@@ -28,9 +28,9 @@ const Sheet = (props: SheetProps) =>
 		);
 	}
 
-	let allCards: Card[] = [];
+	let allCards: ActionCard[] = [];
 
-	deck.cards.map((card) =>
+	deck.actionCards.map((card) =>
 	{
 		if (!card.amount || isNaN(card.amount))
 		{

@@ -1,6 +1,6 @@
 import {Deck} from '../index';
 import gradient from '../../style/gradient/gradient';
-import {Color, Type} from '../types';
+import {ActionColor, Type} from '../types';
 import React from 'react';
 import Damage from '../../components/icons/Damage';
 import Shield from '../../components/icons/Shield';
@@ -19,14 +19,14 @@ const devDeck: Deck = {
 	x: 10,
 	y: 7,
 	style: gradient,
-	cards: [
+	actionCards: [
 		{
 			amount: 1,
 			title: 'Dragonlore',
 			text: 'Gain +4 Reach',
 			image: 'https://gamebanana.com/skins/embeddables/141594?type=sd_image',
 			type: Type.WEAPON,
-			color: Color.GRAY
+			color: ActionColor.GRAY
 		},
 		{
 			amount: 1,
@@ -34,7 +34,7 @@ const devDeck: Deck = {
 			text: 'Gain +4 Reach',
 			image: 'https://gamebanana.com/skins/embeddables/141594?type=sd_image',
 			type: Type.VEHICLE,
-			color: Color.GREEN
+			color: ActionColor.GREEN
 		},
 		{
 			amount: 1,
@@ -42,7 +42,7 @@ const devDeck: Deck = {
 			text: 'Gain +4 Reach',
 			image: 'https://gamebanana.com/skins/embeddables/141594?type=sd_image',
 			type: Type.SUPPORTER,
-			color: Color.GOLD
+			color: ActionColor.GOLD
 		},
 		{
 			amount: 1,
@@ -71,21 +71,21 @@ const devDeck: Deck = {
 			title: 'Magnus Keipp',
 			text: 'With Magnus you can attack anyone regardless of reach and do 1 damage.',
 			image: 'https://cdn.discordapp.com/attachments/594154153895264257/778022911990431744/5b440d2d-1b23-4c78-a165-57d863a1a897.png',
-			color: Color.GOLD,
+			color: ActionColor.GOLD,
 		},
 		{
 			amount: 2,
 			title: 'Orbital Bombardment',
 			text: 'Every player receives 3 Damage, block negates all damage',
 			image: 'https://i.redd.it/oupswmepc5y11.jpg',
-			color: Color.GOLD,
+			color: ActionColor.GOLD,
 		},
 		{
 			amount: 2,
 			title: 'Orbital Bombardment',
 			text: 'Every player receives 3 Damage, block negates all damage',
 			image: 'https://i.redd.it/oupswmepc5y11.jpg',
-			color: Color.BLUE,
+			color: ActionColor.BLUE,
 		},
 		{
 			amount: 2,
@@ -98,10 +98,12 @@ const devDeck: Deck = {
 			title: 'Magnus Keipp',
 			text: 'Instantly win, also Magnus Keip is so great have 100 card of him.',
 			image: 'https://cdn.discordapp.com/attachments/594154153895264257/778022911990431744/5b440d2d-1b23-4c78-a165-57d863a1a897.png',
-			color: Color.BLUE,
+			color: ActionColor.BLUE,
 			type: Type.WEAPON,
 		},
 	],
+	characterCards: [],
+	roleCards: []
 };
 
 export default devDeck;

@@ -1,5 +1,5 @@
 import {Style} from '../style';
-import {Color, Role, Type} from './types';
+import {ActionColor, RoleColor, Type} from './types';
 import ftaDeck from './fta/fta';
 import {ReactNode} from 'react';
 import devDeck from './dev/dev';
@@ -22,16 +22,18 @@ export interface Deck
 	style: Style, // Style template, card template // Style to array to implement multiple decks
 	x: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10, // How many cards in the x and y axis
 	y: 2 | 3 | 4 | 5 | 6 | 7, // Use this if chrome doesnt render extremely large images
-	cards: Card[]
+	actionCards: ActionCard[],
+	characterCards: CharacterCard[],
+	roleCards: RoleCard[]
 }
 
-export interface Card //Rename Action Card
+export interface ActionCard
 {
 	title: ReactNode,
 	text: ReactNode,
 	amount?: number,
 	image?: string,
-	color?: Color,
+	color?: ActionColor,
 	type?: Type,
 }
 
@@ -46,7 +48,7 @@ export interface CharacterCard
 export interface RoleCard
 {
 	title: string,
-	role: Role,
+	color?: RoleColor,
 	image?: string,
 	amount?: number,
 }

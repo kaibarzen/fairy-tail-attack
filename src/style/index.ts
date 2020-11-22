@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-import {Card as DeckCard} from "../decks/index"
+import {ActionCard, CharacterCard, RoleCard} from '../decks/index';
 
 export interface Wrapper
 {
@@ -20,7 +20,19 @@ export interface Hidden
 	height: number,
 }
 
-export interface Card extends DeckCard
+export interface ActionCardStyle extends ActionCard
+{
+	width: number,
+	height: number,
+}
+
+export interface CharacterCardStyle extends CharacterCard
+{
+	width: number,
+	height: number,
+}
+
+export interface RoleCardStyle extends RoleCard
 {
 	width: number,
 	height: number,
@@ -28,7 +40,7 @@ export interface Card extends DeckCard
 
 export interface Style
 {
-	card: React.ComponentType<Card>,
+	card: React.ComponentType<ActionCardStyle>,
 	backside: React.ComponentType<Backside>,
 	hidden: React.ComponentType<Hidden>,
 	wrapper?: React.ComponentType<Wrapper>,

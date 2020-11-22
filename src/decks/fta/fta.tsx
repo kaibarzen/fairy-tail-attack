@@ -4,7 +4,7 @@ import Card from '../../components/icons/Card';
 import React from 'react';
 import MaxHp from '../../components/icons/MaxHp';
 import Expose from '../../components/icons/Expose';
-import {Color, Type} from '../types';
+import {ActionColor, Type} from '../types';
 import Player from '../../components/icons/Player';
 import Damage from '../../components/icons/Damage';
 import Shield from '../../components/icons/Shield';
@@ -19,7 +19,7 @@ const ftaDeck: Deck = {
 	x: 10,
 	y: 5, // Fragment at 6 height, also place images locally
 	style: gradient,
-	cards: [
+	actionCards: [
 		{
 			title: 'Block!',
 			text: <div>Block one <Card> direct attack </Card> at yourself</div>,
@@ -140,12 +140,6 @@ const ftaDeck: Deck = {
 			amount: 1,
 		},
 		{
-			title: 'Justice',
-			text: <div> The <Player/> with most most <Hp/> receives <Damage> 2 </Damage>, the <Player/> with the lowest <Hp/> receives <Hp> 1 </Hp></div>,
-			image: '',
-			amount: 1,
-		},
-		{
 			title: 'Kirschblütenbaum',
 			text: <div> Choose one of following effects<br/>
 			<Player> All </Player> regenerate <Hp> 1 </Hp> <br/>
@@ -159,7 +153,7 @@ const ftaDeck: Deck = {
 			text: <div> You can play <Card> this </Card> at any time. <br/> End the current turn, it's your turn now. </div>,
 			image: '',
 			amount: 1,
-			color: Color.GOLD
+			color: ActionColor.GOLD
 		},
 		{
 			title: 'Pazifista',
@@ -172,12 +166,12 @@ const ftaDeck: Deck = {
 			text: <div><Player> All dead </Player> get revived with <Hp> 1 </Hp> at the start of their turn.</div>,
 			image: 'https://pm1.narvii.com/6645/f99f098030c79b3e51132d22c0161ec3d0ccd579_00.jpg',
 			amount: 1,
-			color: Color.GOLD
+			color: ActionColor.GOLD
 		},
 		{
 			title: 'Critical Block',
 			text: <div> Negate <Damage> All </Damage> you would receive at once</div>,
-			image: '',
+			image: 'https://i.imgur.com/iZMxw9z.png',
 			amount: 1,
 		},
 		{
@@ -209,18 +203,20 @@ const ftaDeck: Deck = {
 			title: 'Orbital Bombardment',
 			text: <div>By the Emperor, <Player> everyone </Player> receives <Damage> 3 </Damage> blocked by one <Card> block </Card> each</div>,
 			image: 'https://i.redd.it/oupswmepc5y11.jpg',
-			color: Color.GOLD,
+			color: ActionColor.GOLD,
 			amount: 1,
 		},
 		{
 			title: 'Hydra',
 			text: <div>Gain <Damage> +1 </Damage> on all your attacks.</div>,
 			image: 'https://vignette.wikia.nocookie.net/thecreatureworldcc/images/9/99/Hydra.jpg/revision/latest?cb=20190813230403',
-			color: Color.BLUE,
+			color: ActionColor.BLUE,
 			type: Type.SUPPORTER,
 			amount: 1,
 		},
 	],
+	characterCards: [],
+	roleCards: []
 };
 
 export default ftaDeck;
