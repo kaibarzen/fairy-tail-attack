@@ -6,6 +6,12 @@ const GradientCard = (props: Card) =>
 {
 	props = {color: Color.RED, type: Type.ACTION, ...props};
 
+	if (props.type === undefined)
+	{
+		//Thanks typescript
+		props.type = Type.ACTION;
+	}
+
 	return (
 		<div
 			className={`action card ${props.color}`}
@@ -16,16 +22,17 @@ const GradientCard = (props: Card) =>
 					margin: props.width * 0.027,
 				}}
 			>
-				<div className={"background"}
+				<div
+					className={'background'}
 					style={{
 						backgroundImage: `url("${props.image}")`,
-						position: "absolute",
+						position: 'absolute',
 						width: props.width * 0.946,
 						height: props.height * 0.946,
 						borderRadius: 16,
-						filter: "blur(20px) brightness(0.8) grayscale(0.8)",
+						filter: 'blur(20px) brightness(0.6) grayscale(0.8)',
 						backgroundSize: 'cover',
-						overflow: "hidden",
+						overflow: 'hidden',
 					}}
 				>
 

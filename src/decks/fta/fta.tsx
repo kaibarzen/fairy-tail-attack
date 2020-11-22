@@ -7,7 +7,7 @@ import Expose from '../../components/icons/Expose';
 import {Color, Type} from '../types';
 import Player from '../../components/icons/Player';
 import Damage from '../../components/icons/Damage';
-import Shield from '../../components/icons/Shields';
+import Shield from '../../components/icons/Shield';
 import HandCard from '../../components/icons/HandCards';
 import EquipedCard from '../../components/icons/EquipedCard';
 import Hp from '../../components/icons/Hp';
@@ -41,7 +41,7 @@ const ftaDeck: Deck = {
 		{
 			title: 'Defeated',
 			text: <div>Choose <Player> one </Player> in range which gets <Expose> defeated </Expose></div>,
-			image: '',
+			image: 'https://i.imgur.com/zAESIM0.png',
 			amount: 1,
 		},
 		{
@@ -80,9 +80,8 @@ const ftaDeck: Deck = {
 		},
 		{
 			title: 'Knowledge',
-			text: <div> Choose a <Player /> and name <Card> 3 </Card>, all named cards musst be given
-				to <Player> you </Player></div>,
-			image: '',
+			text: <div> Choose a <Player /> and name <Card> 3 </Card> all named cards must be given to <Player> you </Player></div>,
+			image: 'https://i.kym-cdn.com/entries/icons/mobile/000/022/138/highresrollsafe.jpg',
 			amount: 1,
 		},
 		{
@@ -152,7 +151,7 @@ const ftaDeck: Deck = {
 			<Player> All </Player> regenerate <Hp> 1 </Hp> <br/>
 			<Player> You </Player> regain <Hp> 2 </Hp> <br/>
 			<Player> You </Player> gain <Shield> 1 </Shield> </div>,
-			image: '',
+			image: 'https://i.imgur.com/eklgIvh.png',
 			amount: 1,
 		},
 		{
@@ -208,18 +207,17 @@ const ftaDeck: Deck = {
 		},
 		{
 			title: 'Orbital Bombardment',
-			text: <div>By the Emperor, <Player> everyone </Player> gets <Damage> 3 </Damage> blocked by <Card> 1
-				block </Card> each</div>,
+			text: <div>By the Emperor, <Player> everyone </Player> receives <Damage> 3 </Damage> blocked by one <Card> block </Card> each</div>,
 			image: 'https://i.redd.it/oupswmepc5y11.jpg',
 			color: Color.GOLD,
 			amount: 1,
 		},
 		{
-			title: 'Underground Hydra',
+			title: 'Hydra',
 			text: <div>Gain <Damage> +1 </Damage> on all your attacks.</div>,
 			image: 'https://vignette.wikia.nocookie.net/thecreatureworldcc/images/9/99/Hydra.jpg/revision/latest?cb=20190813230403',
 			color: Color.BLUE,
-			type: Type.VEHICLE,
+			type: Type.SUPPORTER,
 			amount: 1,
 		},
 	],

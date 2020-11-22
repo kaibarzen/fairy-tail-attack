@@ -13,37 +13,70 @@
 }
 
 /*Outer*/
+.gradient .GRAY {
+    background: linear-gradient(to bottom, #828689, #2c3e50);
+}
+/* Vertical Text*/
+.gradient .GRAY .bottom {
+    background: linear-gradient(to bottom, #bdc3c7, #648cb5);
+}
+/* Horizontal Text*/
+.gradient .GRAY .right {
+    background: linear-gradient(to right, #bdc3c7, #658eb7);
+}
+
+/*Outer*/
+.gradient .GREEN {
+    background: linear-gradient(to bottom, #199c79, #0f9b0f);
+}
+/* Vertical Text*/
+.gradient .GREEN .bottom {
+    background: linear-gradient(to bottom, #0cebeb, #20e3b2, #29ffc6);
+}
+/* Horizontal Text*/
+.gradient .GREEN .right {
+    background: linear-gradient(to right, #0cebeb, #20e3b2, #29ffc6);
+}
+
+/*Outer*/
 .gradient .RED {
     background: linear-gradient(to bottom, #ff512f, #dd2476);
 }
-
-/*Text*/
+/* Vertical Text*/
 .gradient .RED .bottom {
     background: linear-gradient(to bottom, #eb3349, #f45c43);
 }
-
-/*text*/
+/* Horizontal Text*/
 .gradient .RED .right {
     background: linear-gradient(to right, #eb3349, #f45c43);
 }
 
+/* Outer*/
 .gradient .BLUE {
     background: linear-gradient(to bottom, #000046, #1cb5e0)
 }
+/* Vertical Text*/
 .gradient .BLUE .bottom {
     background: linear-gradient(to bottom, #00d2ff, #3a7bd5)
 }
+/* Horizontal Text*/
 .gradient .BLUE .right {
     background: linear-gradient(to right, #00d2ff, #3a7bd5)
 }
 
-.gradient .GOLD .bottom, .gradient .GOLD {
+/* Outer*/
+.gradient .GOLD {
     background: linear-gradient(to bottom, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
-
-.gradient .GOLD .right {
-    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+/* Vertical Text*/
+.gradient .GOLD .bottom {
+    background: linear-gradient(to bottom, #fce59b, #e4b52b, #FBF5B7, #d69721);
 }
+/* Horizontal Text*/
+.gradient .GOLD .right {
+    background: linear-gradient(to right, #fce59b, #e4b52b, #FBF5B7, #d69721);
+}
+
 
 .gradient .textclip {
     -webkit-background-clip: text;

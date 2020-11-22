@@ -3,49 +3,32 @@
 .icon {
     display: inline;
     font-weight: 700;
+    -webkit-text-fill-color: currentColor;
+}
+
+.icon svg{
+    max-height: 1em;
+    max-width: 1em;
+    display: inline;
+    vertical-align: -0.125em;
+    fill: currentColor;
 }
 
 .damageIcon {
     color: #FF416C;
-    -webkit-text-fill-color: #FF416C;
 }
 
 .shieldIcon {
     color: #bdc3c7;
-    -webkit-text-fill-color: #bdc3c7;
 }
 
-.hpIcon {
+.hpIcon, .maxHpIcon {
     color: #f64f59;
-    -webkit-text-fill-color: #f64f59;
 }
 
-.maxHpIcon {
-    color: #f64f59;
-    -webkit-text-fill-color: #f64f59;
-}
-
-.cardIcon {
+.cardIcon, .equipmentCardIcon, .handCardIcon {
     color: #f4791f;
-    -webkit-text-fill-color: #f4791f;
 }
-
-.handCardIcon {
-    color: #f4791f;
-    -webkit-text-fill-color: #f4791f;
-}
-
-.equipmentCardIcon {
-    color: #f4791f;
-    -webkit-text-fill-color: #f4791f;
-}
-
-.exposeIcon {
+.exposeIcon, .playerIcon {
     color: #00d2ff;
-    -webkit-text-fill-color: #00d2ff;
-}
-
-.playerIcon {
-    color: #00d2ff;
-    -webkit-text-fill-color: #00d2ff;
 }
