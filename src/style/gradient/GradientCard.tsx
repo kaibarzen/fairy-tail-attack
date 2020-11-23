@@ -1,5 +1,5 @@
 import React from 'react';
-import {ActionColor, Type} from './types';
+import {Color, Type} from './types';
 import {CardProps} from '../../decks';
 
 
@@ -7,14 +7,14 @@ interface Props extends CardProps
 {
 	title?: string,
 	text?: string,
-	color?: ActionColor
+	color?: Color
 	type?: Type
 	image?: string
 }
 
 const GradientCard = (props: Props) =>
 {
-	props = {color: ActionColor.RED, type: Type.ACTION, image: "", ...props};
+	props = {color: Color.RED, type: Type.ACTION, image: "", ...props};
 
 	return (
 		<div

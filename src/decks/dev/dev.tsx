@@ -1,10 +1,11 @@
 import React from 'react';
 import {Deck} from '../index';
-import {ActionColor, Type} from '../../style/gradient/types';
+import {Color, Type} from '../../style/gradient/types';
 import GradientBackside from '../../style/gradient/GradientBackside';
 import GradientHidden from '../../style/gradient/GradientHidden';
 import GradientCard from '../../style/gradient/GradientCard';
 import GradientWrapper from '../../style/gradient/GradientWrapper';
+import GradientRole from '../../style/gradient/GradientRole';
 
 const devDeck: Deck = {
 	name: 'dev',
@@ -33,7 +34,7 @@ const devDeck: Deck = {
 					text: 'Gain +4 Reach',
 					image: 'https://gamebanana.com/skins/embeddables/141594?type=sd_image',
 					type: Type.WEAPON,
-					color: ActionColor.GRAY,
+					color: Color.GRAY,
 				},
 				{
 					amount: 1,
@@ -41,7 +42,28 @@ const devDeck: Deck = {
 					text: 'Gain +4 Reach',
 					image: 'https://gamebanana.com/skins/embeddables/141594?type=sd_image',
 					type: Type.VEHICLE,
-					color: ActionColor.GREEN,
+					color: Color.GREEN,
+				},
+			],
+		},
+		{
+			name: 'role',
+			wrapper: GradientWrapper,
+			backside: {
+				card: GradientBackside,
+				props: {
+					title: "ROLE",
+					text: "SECRET FTA ROLE CARD",
+				},
+			},
+			hidden: {
+				card: GradientHidden,
+				props: {},
+			},
+			card: GradientRole,
+			props: [
+				{
+
 				},
 			],
 		},

@@ -13,7 +13,8 @@ import GradientWrapper from '../../style/gradient/GradientWrapper';
 import GradientBackside from '../../style/gradient/GradientBackside';
 import GradientHidden from '../../style/gradient/GradientHidden';
 import GradientCard from '../../style/gradient/GradientCard';
-import {ActionColor, Type} from '../../style/gradient/types';
+import {Color, Type} from '../../style/gradient/types';
+import GradientRole from '../../style/gradient/GradientRole';
 
 
 const ftaDeck: Deck = {
@@ -170,7 +171,7 @@ const ftaDeck: Deck = {
 					text: <div> You can play <Card> this </Card> at any time. <br/> End the current turn, it's your turn now. </div>,
 					image: '',
 					amount: 1,
-					color: ActionColor.GOLD
+					color: Color.GOLD
 				},
 				{
 					title: 'Pazifista',
@@ -183,7 +184,7 @@ const ftaDeck: Deck = {
 					text: <div><Player> All dead </Player> get revived with <Hp> 1 </Hp> at the start of their turn.</div>,
 					image: 'https://pm1.narvii.com/6645/f99f098030c79b3e51132d22c0161ec3d0ccd579_00.jpg',
 					amount: 1,
-					color: ActionColor.GOLD
+					color: Color.GOLD
 				},
 				{
 					title: 'Critical Block',
@@ -220,17 +221,58 @@ const ftaDeck: Deck = {
 					title: 'Orbital Bombardment',
 					text: <div>By the Emperor, <Player> everyone </Player> receives <Damage> 3 </Damage> blocked by one <Card> block </Card> each</div>,
 					image: 'https://i.redd.it/oupswmepc5y11.jpg',
-					color: ActionColor.GOLD,
+					color: Color.GOLD,
 					amount: 1,
 				},
 				{
 					title: 'Hydra',
 					text: <div>Gain <Damage> +1 </Damage> on all your attacks.</div>,
 					image: 'https://vignette.wikia.nocookie.net/thecreatureworldcc/images/9/99/Hydra.jpg/revision/latest?cb=20190813230403',
-					color: ActionColor.BLUE,
+					color: Color.BLUE,
 					type: Type.SUPPORTER,
 					amount: 1,
 				}
+			],
+		},
+		{
+			name: 'role',
+			wrapper: GradientWrapper,
+			backside: {
+				card: GradientBackside,
+				props: {
+					title: "ROLE",
+					text: "SECRET FTA ROLE CARD",
+				},
+			},
+			hidden: {
+				card: GradientHidden,
+				props: {},
+			},
+			card: GradientRole,
+			props: [
+				{
+					color: Color.BLUE,
+					name: "GODKING",
+					text: "Kill all traitorous reds and survive."
+				},
+				{
+					amount: 4,
+					color: Color.BLUE,
+					name: "SOLDIER",
+					text: "All hail the godking. May i die protecting him or die trying."
+				},
+				{
+					amount: 1,
+					name: "NEUTRAL",
+					color: Color.WHITE,
+					text: "Kill everyone of them. Leave no one alive."
+				},
+				{
+					amount: 4,
+					name: "TRAITOR",
+					color: Color.RED,
+					text: "Dethrone the godking."
+				},
 			],
 		},
 	],

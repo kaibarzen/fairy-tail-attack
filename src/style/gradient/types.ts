@@ -1,10 +1,11 @@
-export enum ActionColor
+export enum Color
 {
 	RED = 'RED',
 	BLUE = 'BLUE',
 	GOLD = 'GOLD',
 	GRAY = 'GRAY',
-	GREEN = 'GREEN'
+	GREEN = 'GREEN',
+	WHITE = 'WHITE'
 }
 
 export enum Type
@@ -13,11 +14,4 @@ export enum Type
 	WEAPON = 'WPN',
 	VEHICLE = 'VHC',
 	SUPPORTER = 'SPR'
-}
-
-export enum RoleColor
-{
-	RED = 'RED',
-	BLUE = 'BLUE',
-	WHITE = 'WHITE'
 }
