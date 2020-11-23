@@ -1,6 +1,7 @@
 import React from 'react';
 import {Color, Type} from './types';
 import {CardProps} from '../../decks';
+import Hexagon from '../../components/icons/Hexagon';
 
 
 interface Props extends CardProps

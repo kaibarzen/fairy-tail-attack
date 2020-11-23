@@ -16,8 +16,6 @@ Run `yarn start` to open the CRA dev server, go to following paths to preview yo
 - done but still todo
     - same spacing for all icons
     
-- add character cards
-- add symbols, Triangle,  Hexagon, circle, square
 - overview for all symbols and effects
 
 # Attribution

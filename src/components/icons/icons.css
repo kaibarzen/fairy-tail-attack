@@ -32,3 +32,6 @@
 .exposeIcon, .playerIcon {
     color: #00d2ff;
 }
+.triangleIcon, .squareIcon, .circleIcon, .hexagonIcon {
+    color: #8A2387;
+}

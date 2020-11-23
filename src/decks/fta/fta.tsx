@@ -16,6 +16,10 @@ import GradientCard from '../../style/gradient/GradientCard';
 import {Color, Type} from '../../style/gradient/types';
 import GradientRole from '../../style/gradient/GradientRole';
 import GradientCharacter from '../../style/gradient/GradientCharacter';
+import Triangle from '../../components/icons/Triangle';
+import Hexagon from '../../components/icons/Hexagon';
+import Square from '../../components/icons/Square';
+import Circle from '../../components/icons/Circle';
 
 const ftaDeck: Deck = {
 	name: 'fta',

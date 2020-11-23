@@ -16,7 +16,7 @@ interface Props extends CardProps
 
 const GradientCharacter = (props: Props) =>
 {
-	props = {color: Color.RED, health: 1, shield: 0, ...props};
+	props = {color: Color.RED, health: 0, shield: 0, ...props};
 
 	return (
 		<div className={`character card ${props.color}`}>
