@@ -29,19 +29,24 @@ const GradientRole = (props: Props) =>
 						marginBottom: props.height * 0.071,
 						marginTop: 'auto',
 						width: 'min-content',
-						minWidth: "55%"
+						minWidth: '55%',
 					}}
 				>
 					{props.text}
 				</div>
 				<div
-					className={'title bottom'}
+					className={'vertical bottom title'}
 					style={{
 						fontSize: props.height * 0.180,
 						letterSpacing: props.height * 0.02,
 					}}
 				>
-					{props.name || props.color}
+					{
+						(props.name || props.color)?.split("").map((char) =>
+						{
+							return <div className={"vertical text"}> {char} </div>
+						})
+					}
 				</div>
 			</div>
 		</div>

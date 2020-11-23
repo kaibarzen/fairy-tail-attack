@@ -32,13 +32,18 @@ const GradientBackside = (props: Props) =>
 					{props.text}
 				</div>
 				<div
-					className={'title color textclip'}
+					className={'vertical color textclip'}
 					style={{
 						fontSize: props.height * 0.182,
 						letterSpacing: props.height * 0.05,
 					}}
 				>
-					{props.title}
+					{
+						props.title?.split("").map((char) =>
+						{
+							return <div className={"vertical text"}> {char} </div>
+						})
+					}
 				</div>
 			</div>
 		</div>
