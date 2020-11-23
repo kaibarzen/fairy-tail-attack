@@ -6,6 +6,7 @@ import GradientHidden from '../../style/gradient/GradientHidden';
 import GradientCard from '../../style/gradient/GradientCard';
 import GradientWrapper from '../../style/gradient/GradientWrapper';
 import GradientRole from '../../style/gradient/GradientRole';
+import GradientCharacter from '../../style/gradient/GradientCharacter';
 
 const devDeck: Deck = {
 	name: 'dev',
@@ -47,23 +48,27 @@ const devDeck: Deck = {
 			],
 		},
 		{
-			name: 'role',
+			name: 'character',
 			wrapper: GradientWrapper,
+			card: GradientCharacter,
 			backside: {
 				card: GradientBackside,
 				props: {
-					title: "ROLE",
-					text: "SECRET FTA ROLE CARD",
+					title: "CHAR",
+					text: "FTA CHAR- ACTER CARD",
 				},
 			},
 			hidden: {
 				card: GradientHidden,
 				props: {},
 			},
-			card: GradientRole,
 			props: [
 				{
-
+					title: "Mimic",
+					text: "Steal an ability from a player you choose",
+					health: 8,
+					shield: 3,
+					image: "https://i.imgur.com/pMRSJyh.png"
 				},
 			],
 		},

@@ -15,7 +15,7 @@ import GradientHidden from '../../style/gradient/GradientHidden';
 import GradientCard from '../../style/gradient/GradientCard';
 import {Color, Type} from '../../style/gradient/types';
 import GradientRole from '../../style/gradient/GradientRole';
-
+import GradientCharacter from '../../style/gradient/GradientCharacter';
 
 const ftaDeck: Deck = {
 	name: 'fta',
@@ -272,6 +272,40 @@ const ftaDeck: Deck = {
 					name: "TRAITOR",
 					color: Color.RED,
 					text: "Dethrone the godking."
+				},
+			],
+		},
+		{
+			name: 'character',
+			wrapper: GradientWrapper,
+			card: GradientCharacter,
+			backside: {
+				card: GradientBackside,
+				props: {
+					title: "CHAR",
+					text: "FTA CHAR- ACTER CARD",
+				},
+			},
+			hidden: {
+				card: GradientHidden,
+				props: {},
+			},
+			props: [
+				{
+					title: "Mimic",
+					text: "Steal an ability from a player you choose",
+					health: 8,
+					shield: 3,
+					image: "https://i.imgur.com/pMRSJyh.png",
+					color: Color.BLACK
+				},
+				{
+					title: "Walking Turret",
+					text: "Unlimited reach",
+					health: 8,
+					shield: 3,
+					image: "https://i.imgur.com/1dt2MZz.png",
+					color: Color.GRAY
 				},
 			],
 		},

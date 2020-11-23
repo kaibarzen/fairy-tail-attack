@@ -11,7 +11,6 @@ const Hp = (props: { children?: ReactNode}) =>
 			{props.children}
 			<FontAwesomeIcon
 				icon={faHeart}
-
 			/>
 		</div>
 	);

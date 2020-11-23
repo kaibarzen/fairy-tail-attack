@@ -4,6 +4,16 @@
 .gradient
   font-family: 'Rubik', sans-serif
 
+  .BLACK
+    // action card color - Outer
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364)
+    //text
+    .bottom
+      background: linear-gradient(to bottom, #bdc3c7, #427d96)
+
+    .right
+      background: linear-gradient(to right, #bdc3c7, #427d96)
+
   .GRAY
     // action card color - Outer
     background: linear-gradient(to bottom, #828689, #2c3e50)
@@ -170,6 +180,36 @@
       writing-mode: vertical-rl
       width: min-content
       height: min-content
+
+  .character
+
+    .stats
+      position: absolute
+      right: 0px
+      backdrop-filter: opacity(0.6)
+      text-align: center
+
+    .title
+      width: available
+      background-color: #0f0f0f
+
+    .right
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+
+    .content
+      display: flex
+      flex-direction: column
+      flex-wrap: nowrap
+
+    .image
+      flex-grow: 2
+      overflow: hidden
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
 
 
 .gradient .color, .gradient.color, .gradient .colorbottom

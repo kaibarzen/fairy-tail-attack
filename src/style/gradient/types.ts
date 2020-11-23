@@ -5,7 +5,8 @@ export enum Color
 	GOLD = 'GOLD',
 	GRAY = 'GRAY',
 	GREEN = 'GREEN',
-	WHITE = 'WHITE'
+	WHITE = 'WHITE',
+	BLACK = "BLACK"
 }
 
 export enum Type
