@@ -1,21 +1,20 @@
 import React, {ReactNode} from 'react';
-import {Deck} from '../decks';
+import {Card} from '../decks';
 
 interface WrapperProps
 {
-	deck: Deck
-	children: ReactNode,
+	card: Card
+	children: ReactNode
 }
 
 const Wrapper = (props: WrapperProps) =>
 {
-
-	if (props.deck.style.wrapper)
+	if (props.card.wrapper)
 	{
 		return (
-			<props.deck.style.wrapper>
+			<props.card.wrapper>
 				{props.children}
-			</props.deck.style.wrapper>
+			</props.card.wrapper>
 		);
 	}
 

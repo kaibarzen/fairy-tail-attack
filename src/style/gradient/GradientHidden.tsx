@@ -1,7 +1,7 @@
 import React from 'react';
-import {Hidden} from '../index';
+import {CardProps} from '../../decks';
 
-const GradientHidden = (props: Hidden) =>
+const GradientHidden = (props: CardProps) =>
 {
 	return (
 		<div className={'card hidden color'}>

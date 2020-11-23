@@ -1,6 +1,6 @@
 import React from 'react';
-import {Wrapper} from '../index';
 import './gradient.sass';
+import {Wrapper} from '../../decks';
 
 const GradientWrapper = (props: Wrapper) =>
 {

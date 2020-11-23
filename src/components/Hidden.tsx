@@ -1,48 +1,46 @@
 import React from 'react';
-import {getDeck, getType} from '../decks';
+import {getCard, getDeck} from '../decks';
 import Wrapper from './Wrapper';
 
-interface HiddenProps
+interface Props
 {
 	match: {
 		params: {
 			deck: string,
-			type: string,
+			name: string,
 		}
 	}
 }
 
-const Hidden = (props: HiddenProps) =>
+const Hidden = (props: Props) =>
 {
 	const deck = getDeck(props.match.params.deck);
-	const type = getType(props.match.params.type);
-
-	if (!deck || !type)
+	if (!deck)
 	{
 		return (
 			<div>
-				Deck | Type not found
+				Deck not found
 			</div>
 		);
 	}
 
-	const style = deck.style[type];
-
-	if (!style)
+	const card = getCard(props.match.params.name, deck);
+	if (!card)
 	{
 		return (
 			<div>
-				Style type not found
+				Card not found
 			</div>
 		);
 	}
 
 	return (
-		<Wrapper deck={deck}>
+		<Wrapper card={card}>
 			<div style={{width: deck.width, height: deck.height, position: 'absolute'}}>
-				<style.hidden
+				<card.hidden.card
 					width={deck.width}
 					height={deck.height}
+					{...card.backside.props}
 				/>
 			</div>
 		</Wrapper>

@@ -1,9 +1,8 @@
-import {Style} from '../style';
-import {ActionColor, RoleColor, Type} from './types';
-import {ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import devDeck from './dev/dev';
+import ftaDeck from './fta/fta';
 
-export const register: Deck[] = [devDeck];
+export const register: Deck[] = [devDeck, ftaDeck];
 
 export const getDeck = (strg: string) =>
 {
@@ -13,19 +12,12 @@ export const getDeck = (strg: string) =>
 	});
 };
 
-export const getType = (strg: string) =>
+export const getCard = (strg: string, deck: Deck) =>
 {
-	switch (strg.toLowerCase())
+	return deck.cards.find((item) =>
 	{
-		case 'action':
-			return 'action';
-		case 'character':
-			return 'character';
-		case 'role':
-			return 'role';
-		default:
-			return null;
-	}
+		return item.name.toLowerCase() === strg.toLowerCase();
+	});
 };
 
 export interface Deck
@@ -33,39 +25,40 @@ export interface Deck
 	name: string, // Name for the browser
 	width: number, // Width of a single card in px
 	height: number, // height of a single card in px
-	style: Style, // Style template, card template // Style to array to implement multiple decks
 	x: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10, // How many cards in the x and y axis
 	y: 2 | 3 | 4 | 5 | 6 | 7, // Use this if chrome doesnt render extremely large images
-	action: ActionCard[],
-	character: CharacterCard[],
-	role: RoleCard[]
+	cards: Card[]
 }
 
-export interface ActionCard
+export interface Card
 {
-	title: ReactNode,
-	text: ReactNode,
-	amount?: number,
-	image?: string,
-	color?: ActionColor,
-	type?: Type,
+	name: string,
+	backside: SpecialCard,
+	hidden: SpecialCard,
+	card: React.ComponentType<CardProps>,
+	props: CardProp[]
+	wrapper?: React.ComponentType<{ children: ReactNode }>
 }
 
-export interface CharacterCard
+export interface CardProps
 {
-	title: ReactNode,
-	text: ReactNode,
-	image?: string,
-	color?: string,
-	amount?: number,
+	width: number,
+	height: number
 }
 
-export interface RoleCard
+export interface SpecialCard
 {
-	title: string,
-	color?: RoleColor,
-	image?: string,
+	props: object,
+	card: React.ComponentType<CardProps>
+}
+export interface CardProp
+{
 	amount?: number,
+	[key: string]: any
 }
 
+export interface Wrapper
+{
+	children: ReactNode
+}
 

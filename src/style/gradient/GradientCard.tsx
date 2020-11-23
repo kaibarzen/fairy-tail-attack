@@ -1,16 +1,20 @@
 import React from 'react';
-import {ActionCardStyle} from '../index';
-import {ActionColor, Type} from '../../decks/types';
+import {ActionColor, Type} from './types';
+import {CardProps} from '../../decks';
 
-const GradientCard = (props: ActionCardStyle) =>
+
+interface Props extends CardProps
 {
-	props = {color: ActionColor.RED, type: Type.ACTION, ...props};
+	title?: string,
+	text?: string,
+	color?: ActionColor
+	type?: Type
+	image?: string
+}
 
-	if (props.type === undefined)
-	{
-		//Thanks typescript
-		props.type = Type.ACTION;
-	}
+const GradientCard = (props: Props) =>
+{
+	props = {color: ActionColor.RED, type: Type.ACTION, image: "", ...props};
 
 	return (
 		<div
@@ -87,10 +91,6 @@ const GradientCard = (props: ActionCardStyle) =>
 			</div>
 		</div>
 	);
-};
-
-GradientCard.defaultProps = {
-	image: '',
 };
 
 export default GradientCard;

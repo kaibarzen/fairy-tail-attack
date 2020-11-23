@@ -1,7 +1,7 @@
 import React from 'react';
-import {RoleCardStyle} from '../index';
+import {CardProps} from '../../decks';
 
-const GradientRole = (props: RoleCardStyle) =>
+const GradientRole = (props: CardProps) =>
 {
 	return (
 		<div>

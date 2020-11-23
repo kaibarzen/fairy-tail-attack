@@ -1,8 +1,16 @@
 import React from 'react';
-import {Backside} from '../index';
+import {CardProps} from '../../decks';
 
-const GradientBackside = (props: Backside) =>
+interface Props extends CardProps
 {
+	title?: string,
+	text?: string,
+}
+
+const GradientBackside = (props: Props) =>
+{
+	props = {title: 'ACTION', text: 'FTA ACTION CARD', ...props};
+
 	return (
 		<div className={'card backside color'}>
 			<div
@@ -35,11 +43,6 @@ const GradientBackside = (props: Backside) =>
 			</div>
 		</div>
 	);
-};
-
-GradientBackside.defaultProps = {
-	title: 'ACTION',
-	text: 'FTA ACTION CARD',
 };
 
 export default GradientBackside;
