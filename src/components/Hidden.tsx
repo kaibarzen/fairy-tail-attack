@@ -1,28 +1,49 @@
 import React from 'react';
-import {getDeck} from '../decks';
+import {getDeck, getType} from '../decks';
 import Wrapper from './Wrapper';
 
 interface HiddenProps
 {
-	match: any, // React Router
+	match: {
+		params: {
+			deck: string,
+			type: string,
+		}
+	}
 }
 
 const Hidden = (props: HiddenProps) =>
 {
 	const deck = getDeck(props.match.params.deck);
-	if (!deck)
+	const type = getType(props.match.params.type);
+
+	if (!deck || !type)
 	{
 		return (
 			<div>
-				Deck not Found
+				Deck | Type not found
+			</div>
+		);
+	}
+
+	const style = deck.style[type];
+
+	if (!style)
+	{
+		return (
+			<div>
+				Style type not found
 			</div>
 		);
 	}
 
 	return (
 		<Wrapper deck={deck}>
-			<div style={{width: deck.width, height: deck.height}}>
-				<deck.style.hidden width={deck.width} height={deck.height}/>
+			<div style={{width: deck.width, height: deck.height, position: 'absolute'}}>
+				<style.hidden
+					width={deck.width}
+					height={deck.height}
+				/>
 			</div>
 		</Wrapper>
 	);

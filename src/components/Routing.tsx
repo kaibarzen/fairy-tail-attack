@@ -15,16 +15,16 @@ const Routing = () =>
 		<Router>
 			<Switch>
 				<Route
-					path={'/:deck/backside'}
+					path={'/:deck/:type/backside'}
 					component={Backside}
 				/>
 				<Route
-					path={'/:deck/hidden'}
+					path={'/:deck/:type/hidden'}
 					component={Hidden}
 				/>
 
 				<Route
-					path={'/:deck/sheet/:n'}
+					path={'/:deck/:type/sheet/:n'}
 					component={Sheet}
 				/>
 

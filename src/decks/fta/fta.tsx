@@ -19,7 +19,7 @@ const ftaDeck: Deck = {
 	x: 10,
 	y: 5, // Fragment at 6 height, also place images locally
 	style: gradient,
-	actionCards: [
+	action: [
 		{
 			title: 'Block!',
 			text: <div>Block one <Card> direct attack </Card> at yourself</div>,
@@ -215,8 +215,8 @@ const ftaDeck: Deck = {
 			amount: 1,
 		},
 	],
-	characterCards: [],
-	roleCards: []
+	character: [],
+	role: []
 };
 
 export default ftaDeck;

@@ -1,10 +1,9 @@
 import {Style} from '../style';
 import {ActionColor, RoleColor, Type} from './types';
-import ftaDeck from './fta/fta';
 import {ReactNode} from 'react';
 import devDeck from './dev/dev';
 
-export const register: Deck[] = [devDeck, ftaDeck];
+export const register: Deck[] = [devDeck];
 
 export const getDeck = (strg: string) =>
 {
@@ -12,6 +11,21 @@ export const getDeck = (strg: string) =>
 	{
 		return item.name.toLowerCase() === strg.toLowerCase();
 	});
+};
+
+export const getType = (strg: string) =>
+{
+	switch (strg.toLowerCase())
+	{
+		case 'action':
+			return 'action';
+		case 'character':
+			return 'character';
+		case 'role':
+			return 'role';
+		default:
+			return null;
+	}
 };
 
 export interface Deck
@@ -22,9 +36,9 @@ export interface Deck
 	style: Style, // Style template, card template // Style to array to implement multiple decks
 	x: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10, // How many cards in the x and y axis
 	y: 2 | 3 | 4 | 5 | 6 | 7, // Use this if chrome doesnt render extremely large images
-	actionCards: ActionCard[],
-	characterCards: CharacterCard[],
-	roleCards: RoleCard[]
+	action: ActionCard[],
+	character: CharacterCard[],
+	role: RoleCard[]
 }
 
 export interface ActionCard
@@ -43,6 +57,7 @@ export interface CharacterCard
 	text: ReactNode,
 	image?: string,
 	color?: string,
+	amount?: number,
 }
 
 export interface RoleCard

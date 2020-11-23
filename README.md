@@ -16,8 +16,6 @@ Run `yarn start` to open the CRA dev server, go to following paths to preview yo
 - done but still todo
     - same spacing for all icons
     
-- add green color (healing)
-- add grey color (negating + block)
 - add character cards
 - add role cards
 - overview for all symbols and effects

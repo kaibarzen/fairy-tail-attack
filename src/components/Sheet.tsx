@@ -1,20 +1,39 @@
 import React from 'react';
-import {ActionCard, getDeck} from '../decks';
+import {ActionCard, CharacterCard, getDeck, getType, RoleCard} from '../decks';
 import Wrapper from './Wrapper';
 
 interface SheetProps
 {
-	match: any, // React Router
+	match: {
+		params: {
+			deck: string,
+			type: string,
+			n: any,
+		}
+	}
 }
 
 const Sheet = (props: SheetProps) =>
 {
 	const deck = getDeck(props.match.params.deck);
-	if (!deck)
+	const type = getType(props.match.params.type);
+
+	if (!deck || !type)
 	{
 		return (
 			<div>
-				Deck not Found
+				Deck | Type not found
+			</div>
+		);
+	}
+
+	const style = deck.style[type];
+
+	if (!style)
+	{
+		return (
+			<div>
+				Style type not found
 			</div>
 		);
 	}
@@ -23,14 +42,17 @@ const Sheet = (props: SheetProps) =>
 	{
 		return (
 			<div>
-				/:deck/sheet/:n , n is not numeric or must be larger then 0
+				/:deck/:type/sheet/:n , n is not numeric or must be larger then 0
 			</div>
 		);
 	}
 
-	let allCards: ActionCard[] = [];
+	const cards = deck[type];
+	let allCards: object[] = [];
 
-	deck.actionCards.map((card) =>
+
+	// @ts-ignore
+	cards.map((card: CharacterCard | ActionCard | RoleCard) =>
 	{
 		if (!card.amount || isNaN(card.amount))
 		{
@@ -60,7 +82,7 @@ const Sheet = (props: SheetProps) =>
 			out.push(
 				<Wrapper deck={deck}>
 					<div style={{position: 'absolute', top: y, left: x, width: deck.width, height: deck.height}}>
-						<deck.style.hidden
+						<style.hidden
 							width={deck.width}
 							height={deck.height}
 						/>
@@ -73,7 +95,8 @@ const Sheet = (props: SheetProps) =>
 			out.push(
 				<Wrapper deck={deck}>
 					<div style={{position: 'absolute', top: y, left: x, width: deck.width, height: deck.height}}>
-						<deck.style.card
+						{/* @ts-ignore */}
+						<style.card
 							width={deck.width}
 							height={deck.height}
 							{...sheetCards[i]}
@@ -87,7 +110,7 @@ const Sheet = (props: SheetProps) =>
 			out.push(
 				<Wrapper deck={deck}>
 					<div style={{position: 'absolute', top: y, left: x, width: deck.width, height: deck.height}}>
-						<deck.style.card
+						<style.card
 							width={deck.width}
 							height={deck.height}
 							title={'DISCARD THIS'}

@@ -40,8 +40,22 @@ export interface RoleCardStyle extends RoleCard
 
 export interface Style
 {
-	card: React.ComponentType<ActionCardStyle>,
-	backside: React.ComponentType<Backside>,
-	hidden: React.ComponentType<Hidden>,
 	wrapper?: React.ComponentType<Wrapper>,
+
+	action?: {
+		card: React.ComponentType<ActionCardStyle>
+		backside: React.ComponentType<Backside>
+		hidden: React.ComponentType<Hidden>
+	}
+
+	character?: {
+		card: React.ComponentType<CharacterCardStyle>
+		backside: React.ComponentType<Backside>
+		hidden: React.ComponentType<Hidden>
+	}
+	role?: {
+		card: React.ComponentType<RoleCardStyle>
+		backside: React.ComponentType<Backside>
+		hidden: React.ComponentType<Hidden>
+	}
 }
