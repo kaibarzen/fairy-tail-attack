@@ -1,6 +1,6 @@
 {
   "name": "fairy-tail-attack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@babel/preset-typescript": "^7.12.1",
