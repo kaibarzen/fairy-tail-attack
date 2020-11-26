@@ -48,13 +48,13 @@ export interface CardProps
 
 export interface SpecialCard
 {
-	props: object,
+	props: object,  // ALl Props get then passed to the component
 	card: React.ComponentType<CardProps>
 }
 export interface CardProp
 {
 	amount?: number,
-	[key: string]: any
+	[key: string]: any // ALl Props get then passed to the component
 }
 
 export interface Wrapper

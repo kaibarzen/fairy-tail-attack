@@ -44,13 +44,13 @@ const ftaDeck: Deck = {
 			props: [
 				{
 					title: 'Block!',
-					text: <div>Block one <Card> direct attack </Card> at yourself</div>,
+					text: <div>Block one <Card> Attack! </Card> directed at yourself.</div>,
 					image: '',
 					amount: 1,
 				},
 				{
 					title: 'Attack!',
-					text: <div>Do <Damage> 1 </Damage> directed at a player in range</div>,
+					text: <div>Do <Damage> 1 </Damage> directed at a player in range.</div>,
 					image: '',
 					amount: 1,
 				},
@@ -145,7 +145,7 @@ const ftaDeck: Deck = {
 				},
 				{
 					title: 'Critical Block',
-					text: <div> Negate <Damage> All </Damage> you would receive at once</div>,
+					text: <div> Negate <Damage> all </Damage> you would receive from one effect.</div>,
 					image: '',
 					amount: 1,
 				},
@@ -235,7 +235,7 @@ const ftaDeck: Deck = {
 					color: Color.BLUE,
 					type: Type.SUPPORTER,
 					amount: 1,
-				}
+				},
 			],
 		},
 		{
@@ -260,19 +260,19 @@ const ftaDeck: Deck = {
 					text: "Kill all traitorous reds and survive."
 				},
 				{
-					amount: 4,
-					color: Color.BLUE,
-					name: "SOLDIER",
-					text: "All hail the godking. May i die protecting him or die trying."
-				},
-				{
 					amount: 1,
 					name: "NEUTRAL",
 					color: Color.WHITE,
 					text: "Kill everyone of them. Leave no one alive."
 				},
 				{
-					amount: 4,
+					amount: 1,
+					color: Color.BLUE,
+					name: "SOLDIER",
+					text: "All hail the godking. May I die protecting him or die trying."
+				},
+				{
+					amount: 1,
 					name: "TRAITOR",
 					color: Color.RED,
 					text: "Dethrone the godking."
@@ -298,7 +298,7 @@ const ftaDeck: Deck = {
 				{
 					title: "Mimic",
 					text: "Steal an ability from a player you choose",
-					health: 8,
+					health: 5,
 					shield: 3,
 					image: "https://i.imgur.com/pMRSJyh.png",
 					color: Color.BLACK
@@ -306,11 +306,19 @@ const ftaDeck: Deck = {
 				{
 					title: "Walking Turret",
 					text: "Unlimited reach",
-					health: 8,
+					health: 5,
 					shield: 3,
 					image: "https://i.imgur.com/1dt2MZz.png",
 					color: Color.GRAY
 				},
+				{
+					title: "Tesla Tank",
+					text: <div>With the power of Elon Musk all your <Card> Attacks! </Card> need two <Card> Block! </Card> to be blocked.</div>,
+					image: "https://cdnb.artstation.com/p/assets/images/images/013/436/421/large/filip-bazarewski-tank.jpg?1539611998",
+					color: Color.BLACK,
+					health: 4,
+					shield: 4,
+				}
 			],
 		},
 	],
