@@ -1,5 +1,4 @@
-
-[Header image]: (https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/header.png "Role cards")
+![Image of Yaktocat](https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/header.png)
 
 # Fairy Tail Attack!
 
