@@ -1,5 +1,5 @@
 
-[Header image]: https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/header.png "Role cards"
+[Header image]: (https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/header.png "Role cards")
 
 # Fairy Tail Attack!
 
@@ -41,8 +41,9 @@ The Wrapper is optional and gets wrapped around all rendered cards allowing you 
 2. Run `yarn build` which exports you cards to out/:deck/
 3. Import them into TTS
 
-# Additional attribution
-
-### Icons
-- Freepik
-
+# Example output
+    
+- [Action Card Sheet](https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/action_sheet.png)
+- [Action Card Backside](https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/action_backside.png)
+- [Character Card Sheet](https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/character_sheet.png)
+- [Role Card Sheet](https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/role_sheet.png)

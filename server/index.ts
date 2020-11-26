@@ -1,4 +1,4 @@
-import {ActionCard, Card, CharacterCard, Deck, register, RoleCard} from '../src/decks';
+import {Card, Deck, register} from '../src/decks';
 import chalk from 'chalk';
 import puppeteer from 'puppeteer';
 import {Page} from 'puppeteer';
@@ -46,7 +46,7 @@ const renderBackside = async (deck: Deck, card: Card, page: Page) =>
 		height: deck.height,
 	});
 	await page.goto(`http://localhost:3000/${deck.name}/${card.name}/backside`, {waitUntil: 'networkidle2'});
-	await page.screenshot({path: `out/${deck.name}/${card.name}/backsite.png`});
+	await page.screenshot({path: `out/${deck.name}/${card.name}/backside.png`});
 };
 
 (async () =>
