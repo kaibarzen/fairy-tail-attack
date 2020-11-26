@@ -1,5 +1,5 @@
 
-[Header image]: https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/header.png "FTA Deck role cards"
+[Header image]: https://raw.githubusercontent.com/kaibarzen/fairy-tail-attack/master/example/header.png "Role cards"
 
 # Fairy Tail Attack!
 
